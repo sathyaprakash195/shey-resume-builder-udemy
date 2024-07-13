@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic template</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .resume-body {
+      display: flex;
+      justify-content: center;
+    }
+    .resume-container {
+      width: 800px;
+    }
+    .intro-content {
+      text-align: center;
+      background-color: #222e46;
+      padding: 20px;
+      color: #bba17f;
+      text-transform: uppercase;
+    }
+    .name {
+      font-size: 35px;
+    }
+    .profession {
+      font-size: 14px;
+    }
+
+    .main-content {
+      display: flex;
+      padding: 20px;
+    }
+    .left-column {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    .section-title {
+      font-size: 20px;
+      color: #222e46;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      border-bottom: 1px solid #949494;
+    }
+    .phone,
+    .email,
+    .website,
+    .address,
+    li {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .right-column {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding-left: 30px;
+      border-left: 1px solid #bba17f;
+    }
+
+    .experience-item {
+      margin-bottom: 30px;
+    }
+    .company {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .role {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .duration {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .roles-responsibilities , .carrer-objective {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+  <body class="resume-body">
+    <div class="resume-container">
+      <div class="intro-content">
+        <h1 class="name">{{name}}</h1>
+        <h2 class="profession">{{profession}}</h2>
+      </div>
+
+      <div class="main-content">
+        <div class="left-column">
+          <div class="contact-details">
+            <h1 class="section-title">Contact</h1>
+
+            <h1 class="phone">📞 {{phone}}</h1>
+            <h1 class="email">✉️ {{email}}</h1>
+            <h1 class="website">🌐 {{portfolio}}</h1>
+            <h1 class="address">🏠 {{address}}</h1>
+          </div>
+
+          <div class="education-details">
+            <h1 class="section-title">Education</h1>
+
+            <ul>
+              {{#education}}
+              <li>{{qualification}} - {{yearOfPassing}}</li>
+              {{/education}}
+            </ul>
+          </div>
+
+          <div class="skills-details">
+            <h1 class="section-title">Skills</h1>
+
+            <ul>
+              {{#skills}}
+              <li>{{technology}}</li>
+              {{/skills}}
+            </ul>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="carrer-objective-details">
+            <h1 class="section-title">Career Objective</h1>
+            <p class="carrer-objective">{{careerObjective}}</p>
+          </div>
+
+          <div class="experience-details">
+            <h1 class="section-title">Experience</h1>
+
+            {{#experience}}
+
+            <div class="experience-item">
+              <h1 class="company">{{company}}</h1>
+              <h2 class="role">{{role}}</h2>
+              <h3 class="duration">{{startDate}} - {{endDate}}</h3>
+              <p class="roles-responsibilities">{{rolesAndResponsibilities}}</p>
+            </div>
+
+            {{/experience}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

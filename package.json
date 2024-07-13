@@ -1,0 +1,38 @@
+{
+  "name": "shey-resume-builder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^5.2.2",
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
+    "@uiw/react-codemirror": "^4.23.0",
+    "antd": "^5.19.1",
+    "dayjs": "^1.11.11",
+    "firebase": "^10.12.3",
+    "lucide-react": "^0.402.0",
+    "mongoose": "^8.4.5",
+    "mustache": "^4.2.0",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-to-print": "^2.15.1",
+    "stripe": "^16.2.0",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/mustache": "^4.2.5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
